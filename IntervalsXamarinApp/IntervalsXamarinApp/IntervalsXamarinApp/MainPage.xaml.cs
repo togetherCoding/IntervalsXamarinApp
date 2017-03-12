@@ -12,6 +12,11 @@ namespace IntervalsXamarinApp
         public MainPage()
         {
             InitializeComponent();
+
+            var tapRecognizer = new TapGestureRecognizer();
+            tapRecognizer.Tapped += (s, e) => { label1.Text = "zmieniono"; };
+
+            stack.GestureRecognizers.Add(tapRecognizer);
         }
     }
 }

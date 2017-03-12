@@ -4,8 +4,28 @@
              xmlns:local="clr-namespace:IntervalsXamarinApp"
              x:Class="IntervalsXamarinApp.MainPage">
 
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <Grid RowSpacing="2" BackgroundColor="#5c6bc0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <BoxView Grid.Row="0" BackgroundColor="#9fa8da"/>
+        <ScrollView Grid.Row="1" BackgroundColor="#e8eaf6">
+            <StackLayout x:Name="stack">
+                <Label x:Name="label1" Text="Interwał" FontSize="40" HeightRequest="100"/>
+                <Label Text="Interwał" FontSize="40" HeightRequest="100"/>
+                <Label Text="Interwał" FontSize="40" HeightRequest="100"/>
+                <Label Text="Interwał" FontSize="40" HeightRequest="100"/>
+                <Label Text="Interwał" FontSize="40" HeightRequest="100"/>
+                <Label Text="Interwał" FontSize="40" HeightRequest="100"/>
+                <Label Text="Interwał" FontSize="40" HeightRequest="100"/>
+                <Label Text="Interwał" FontSize="40" HeightRequest="100"/>
+                <Label Text="Interwał" FontSize="40" HeightRequest="100"/>
+                <Label Text="Interwał" FontSize="40" HeightRequest="100"/>
+            </StackLayout>
+        </ScrollView>
+        <BoxView Grid.Row="2" BackgroundColor="#9fa8da"/>
+    </Grid>
 
 </ContentPage>
