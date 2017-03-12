@@ -13,7 +13,11 @@
         <BoxView Grid.Row="0" BackgroundColor="#9fa8da"/>
         <ScrollView Grid.Row="1" BackgroundColor="#e8eaf6">
             <StackLayout x:Name="stack">
-                <Label x:Name="label1" Text="Interwał" FontSize="40" HeightRequest="100"/>
+                <StackLayout x:Name="element1" Orientation="Horizontal">
+                    <Image Source="http://lorempixel.com/800/600/people/1"/>
+                    <Label x:Name="label" Text="Chuj"/>
+                    <BoxView BackgroundColor="Red" WidthRequest="50"/>
+                </StackLayout>
                 <Label Text="Interwał" FontSize="40" HeightRequest="100"/>
                 <Label Text="Interwał" FontSize="40" HeightRequest="100"/>
                 <Label Text="Interwał" FontSize="40" HeightRequest="100"/>

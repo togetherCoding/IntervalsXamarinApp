@@ -14,9 +14,9 @@ namespace IntervalsXamarinApp
             InitializeComponent();
 
             var tapRecognizer = new TapGestureRecognizer();
-            tapRecognizer.Tapped += (s, e) => { label1.Text = "zmieniono"; };
+            tapRecognizer.Tapped += (s, e) => { label.Text = "zmieniono"; };
 
-            stack.GestureRecognizers.Add(tapRecognizer);
+            element1.GestureRecognizers.Add(tapRecognizer);
         }
     }
 }
