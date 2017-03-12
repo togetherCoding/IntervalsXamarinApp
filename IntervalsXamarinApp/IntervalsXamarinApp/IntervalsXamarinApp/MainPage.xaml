@@ -26,7 +26,7 @@
                 <Label Text="Interwał" FontSize="40" HeightRequest="100"/>
                 <Label Text="Interwał" FontSize="40" HeightRequest="100"/>
                 <Label Text="Interwał" FontSize="40" HeightRequest="100"/>
-                <Label Text="Interwały" FontSize="40" HeightRequest="100"/>
+                <Label Text="Interwał" FontSize="40" HeightRequest="100"/>
             </StackLayout>
         </ScrollView>
         <BoxView Grid.Row="2" BackgroundColor="#9fa8da"/>
