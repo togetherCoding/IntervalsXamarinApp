@@ -10,24 +10,12 @@
             <RowDefinition Height="8*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <BoxView Grid.Row="0" BackgroundColor="#9fa8da"/>
+        <StackLayout Grid.Row="0" BackgroundColor="#9fa8da" Orientation="Horizontal">
+            <Label Text="Greatest app ever" FontSize="Large" FontAttributes="Bold" TextColor="White" 
+                   VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand"></Label>
+        </StackLayout>
         <ScrollView Grid.Row="1" BackgroundColor="#e8eaf6">
-            <StackLayout x:Name="stack">
-                <StackLayout x:Name="element1" Orientation="Horizontal">
-                    <Image Source="http://lorempixel.com/800/600/people/1"/>
-                    <Label x:Name="label" Text="Chuj"/>
-                    <BoxView BackgroundColor="Red" WidthRequest="50"/>
-                </StackLayout>
-                <Label Text="Interwał" FontSize="40" HeightRequest="100"/>
-                <Label Text="Interwał" FontSize="40" HeightRequest="100"/>
-                <Label Text="Interwał" FontSize="40" HeightRequest="100"/>
-                <Label Text="Interwał" FontSize="40" HeightRequest="100"/>
-                <Label Text="Interwał" FontSize="40" HeightRequest="100"/>
-                <Label Text="Interwał" FontSize="40" HeightRequest="100"/>
-                <Label Text="Interwał" FontSize="40" HeightRequest="100"/>
-                <Label Text="Interwał" FontSize="40" HeightRequest="100"/>
-                <Label Text="Interwał" FontSize="40" HeightRequest="100"/>
-            </StackLayout>
+            <StackLayout x:Name="stack" Margin="2,10,2,10" />
         </ScrollView>
         <BoxView Grid.Row="2" BackgroundColor="#9fa8da"/>
     </Grid>
