@@ -16,7 +16,7 @@ namespace IntervalsXamarinApp.ViewOperation
         {
             _stackLayout = stackLayout;
         }
-        public void GenerateView(List<IExercise> dataToAdd)
+        public void GenerateView(IEnumerable<IExercise> dataToAdd)
         {
             foreach (IExercise ex in dataToAdd)
             {

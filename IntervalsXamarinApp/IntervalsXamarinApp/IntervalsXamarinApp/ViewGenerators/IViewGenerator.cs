@@ -8,8 +8,8 @@ using Xamarin.Forms;
 
 namespace IntervalsXamarinApp
 {
-    public interface IViewGenerator
+    public interface IViewGenerator 
     {
-        void GenerateView(List<IExercise> dataToAdd);
+        void GenerateView(IEnumerable<IExercise> dataToAdd);
     }
 }

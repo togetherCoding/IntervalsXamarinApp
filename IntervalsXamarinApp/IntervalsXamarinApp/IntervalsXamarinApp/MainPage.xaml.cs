@@ -3,6 +3,7 @@ using IntervalsXamarinApp.ViewOperation;
 using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
+using System.Linq;
 
 namespace IntervalsXamarinApp
 {
@@ -12,7 +13,7 @@ namespace IntervalsXamarinApp
         {
             InitializeComponent();
 
-            var exerciseList = new List<IExercise>()
+            var exerciseList = new HashSet<IExercise>()
             {
                  new Exercise { Name = "hardkor", Description = "nie dasz rady", TimeLenght = TimeSpan.FromMinutes(80),
                      ExImage = new ExerciseImage { Height = 50, Width = 50, UrlAdress = @"http://lorempixel.com/300/200/people/1" }},
@@ -35,11 +36,14 @@ namespace IntervalsXamarinApp
             };
             IViewGenerator exerciseListView = new StackViewGenerator(stack);
             exerciseListView.GenerateView(exerciseList);
-     
-            //var tapRecognizer = new TapGestureRecognizer();
-            //tapRecognizer.Tapped += (s, e) => { label.Text = "zmieniono"; };
 
-            //element1.GestureRecognizers.Add(tapRecognizer);
+            //Wrap this up
+            foreach (var children in stack.Children)
+            {
+                var tapRecognizer = new TapGestureRecognizer();
+                tapRecognizer.Tapped += (s, e) => { children.BackgroundColor = Color.Aqua; };
+                children.GestureRecognizers.Add(tapRecognizer);
+            }
         }
     }
 }
