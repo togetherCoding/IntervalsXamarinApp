@@ -8,8 +8,8 @@ namespace IntervalsXamarinApp.Infrastructure
 {
     public class ExerciseImage
     {
-        public int Height { get; set; }
-        public int Width { get; set; }
+        public int Height { get; set; } = 50;
+        public int Width { get; set; } = 50;
         public string UrlAdress { get; set; }
     }
 }
