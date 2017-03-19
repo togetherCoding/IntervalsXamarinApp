@@ -40,22 +40,19 @@
     </Compile>
     <Compile Include="Cells\ExerciseCell.cs" />
     <Compile Include="ExerciseBase.cs" />
+    <Compile Include="ExerciseMainPage.cs" />
     <Compile Include="Infrastructure\Exercise.cs" />
     <Compile Include="Infrastructure\ExerciseImage.cs" />
     <Compile Include="Infrastructure\IExercise.cs" />
+    <Compile Include="EntrancePage.xaml.cs">
+      <DependentUpon>EntrancePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Page1.xaml.cs">
       <DependentUpon>Page1.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MainPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Include="App.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -77,6 +74,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EntrancePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Page1.xaml">

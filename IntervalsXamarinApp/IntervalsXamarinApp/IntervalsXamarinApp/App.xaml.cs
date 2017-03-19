@@ -13,9 +13,7 @@ namespace IntervalsXamarinApp
         {
             InitializeComponent();
 
-            MainPage = new IntervalsXamarinApp.MainPage();
-            MainPage = new NavigationPage(new MainPage());
-
+            MainPage = new NavigationPage(new EntrancePage());
         }
 
         protected override void OnStart()

@@ -13,34 +13,43 @@ namespace IntervalsXamarinApp
         {
             var nameLabel = new Label()
             {
-                Font = Font.BoldSystemFontOfSize(NamedSize.Large),
-                XAlign = TextAlignment.Center,
-                VerticalTextAlignment = TextAlignment.Center
+                Font = Font.SystemFontOfSize(NamedSize.Large, FontAttributes.Bold),
+                TextColor = Color.Black,
             };
             nameLabel.SetBinding(Label.TextProperty, new Binding("Name"));
 
             var descriptionLabel = new Label()
             {
-                Font = Font.SystemFontOfSize(NamedSize.Small),
-                VerticalTextAlignment = TextAlignment.Center
+                Font = Font.SystemFontOfSize(NamedSize.Medium),
+                TextColor = Color.Black,
             };
             descriptionLabel.SetBinding(Label.TextProperty, new Binding("Description"));
 
             var exImage = new Image
             {
-                
-                WidthRequest = 50,
-                HeightRequest = 50
+                Margin = new Thickness(5, 5, 0, 5)
             };
             exImage.SetBinding(Image.SourceProperty, new Binding("ExImage.UrlAdress"));
 
-
             View = new StackLayout
             {
-                Children = {exImage, nameLabel, descriptionLabel },
-                Orientation = StackOrientation.Horizontal 
+                Orientation = StackOrientation.Horizontal,
+                Children = {
+                    exImage,
+                    new StackLayout()
+                    {
+                        VerticalOptions = LayoutOptions.StartAndExpand,
+                        Spacing = 0,
+                        Children =
+                        {
+                            nameLabel,
+                            descriptionLabel
+                        },
+                    }
+                },
+                BackgroundColor = Color.Gray,
             };
-
         }
     }
 }
+
