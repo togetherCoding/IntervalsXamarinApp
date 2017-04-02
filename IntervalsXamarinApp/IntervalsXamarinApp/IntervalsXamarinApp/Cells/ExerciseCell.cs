@@ -13,14 +13,15 @@ namespace IntervalsXamarinApp
         {
             var nameLabel = new Label()
             {
-                Font = Font.SystemFontOfSize(NamedSize.Large, FontAttributes.Bold),
+                FontSize = 35,
+                FontAttributes = FontAttributes.Bold,
                 TextColor = Color.Black,
             };
             nameLabel.SetBinding(Label.TextProperty, new Binding("Name"));
 
             var descriptionLabel = new Label()
             {
-                Font = Font.SystemFontOfSize(NamedSize.Medium),
+                FontSize = 15,
                 TextColor = Color.Black,
             };
             descriptionLabel.SetBinding(Label.TextProperty, new Binding("Description"));
@@ -34,6 +35,8 @@ namespace IntervalsXamarinApp
             View = new StackLayout
             {
                 Orientation = StackOrientation.Horizontal,
+                VerticalOptions = LayoutOptions.StartAndExpand,
+                HorizontalOptions = LayoutOptions.FillAndExpand,
                 Children = {
                     exImage,
                     new StackLayout()

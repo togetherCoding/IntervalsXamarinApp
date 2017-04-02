@@ -11,33 +11,37 @@ using Xamarin.Forms.Xaml;
 namespace IntervalsXamarinApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Page1 : ContentPage
+    public partial class ExerciseViewPage : ContentPage
     {
-        public Page1(IExercise exercise)
+        public ExerciseViewPage(IExercise exercise)
         {
-            Title = $"Wybrales interwal - {exercise.Name.ToUpper()}";
+            Title = $"{exercise.Name.ToUpper()}";
             Font.SystemFontOfSize(30, FontAttributes.Bold);
-            var exName = new Label()
-            {
-                Text = $"Nazwa: {exercise.Name}"
-            };
+
             var exDesc = new Label()
             {
+                Margin = new Thickness(10, 10, 0, 10),
                 Text = $"Opis: {exercise.Description}"
             };
+
             var exTime = new Label()
             {
-                Text = $"Czas trwania: {exercise.TimeLenght}"
+                Margin = new Thickness(10, 10, 0, 10),
+                Text = $"Czas trwania: {exercise.TimeLenght}."
             };
+
             var exImage = new Image()
             {
+                Margin = new Thickness(0, 10, 0, 10),
                 Source = exercise.ExImage.UrlAdress,
-                WidthRequest = exercise.ExImage.Width,
-                HeightRequest = exercise.ExImage.Height
+                WidthRequest = exercise.ExImage.Width + 100,
+                HeightRequest = exercise.ExImage.Height + 100
             };
+
             Content = new StackLayout
             {
-                Children = { exImage, exName, exDesc, exTime }
+                Children = { exImage, exDesc, exTime },
+                BackgroundColor = Color.Gray
             };
         }
     }
