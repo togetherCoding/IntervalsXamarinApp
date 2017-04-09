@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using IntervalsXamarinApp.Model;
 using Xamarin.Forms;
 
 namespace IntervalsXamarinApp
@@ -13,8 +14,7 @@ namespace IntervalsXamarinApp
     {
         public ExerciseMainPage()
         {
-            var listView = new ListView();
-            listView.ItemsSource = ExerciseBase.GetExercises();
+            var listView = new ListView {ItemsSource = ExerciseBase.GetExercises()};
             listView.ItemSelected += (s, e) =>
             {
                 if(e.SelectedItem != null)

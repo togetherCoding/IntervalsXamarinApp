@@ -39,7 +39,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Cells\ExerciseCell.cs" />
-    <Compile Include="ExerciseBase.cs" />
+    <Compile Include="Model\ExerciseBase.cs" />
     <Compile Include="ExerciseMainPage.cs" />
     <Compile Include="Infrastructure\Exercise.cs" />
     <Compile Include="Infrastructure\ExerciseImage.cs" />
@@ -51,6 +51,7 @@
       <DependentUpon>ExerciseViewPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TraninigPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">

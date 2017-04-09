@@ -16,7 +16,7 @@ namespace IntervalsXamarinApp
         {
             InitializeComponent();
             Title = "Witamy w aplikacji interwalowej!";
-            var navigateToExercisePage = new Button()
+            var navigateToExercisePage = new Button
             {
                 Text = "Lista cwiczen",
                 FontSize = 20,

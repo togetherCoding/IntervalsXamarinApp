@@ -1,18 +1,15 @@
-﻿using IntervalsXamarinApp.Infrastructure;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using IntervalsXamarinApp.Infrastructure;
 
-namespace IntervalsXamarinApp
+namespace IntervalsXamarinApp.Model
 {
     public class ExerciseBase
     {
         private const string DescText = "W przeciwieństwie do rozpowszechnionych opinii, Lorem Ipsum nie jest tylko przypadkowym tekstem.";
         public static List<IExercise> GetExercises()
         {
-            return new List<IExercise>()
+            return new List<IExercise>
             {
                  new Exercise { Name = "hardkor", Description = DescText, TimeLenght = TimeSpan.FromMinutes(80),
                      ExImage = new ExerciseImage { Height = 150, Width = 300, UrlAdress = @"http://lorempixel.com/400/300/people/1" }},
